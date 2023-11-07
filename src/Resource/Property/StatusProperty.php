@@ -57,3 +57,4 @@ class StatusProperty extends AbstractProperty
         return $this;
     }
 }
+
