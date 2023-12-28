@@ -17,9 +17,8 @@ class StatusPropertyObject extends AbstractPropertyObject
 
     protected function initialize(): void
     {
-        $this->status = isset($this->getRawData()['status']) ?
-            StatusPropertyConfiguration::fromRawData((array) $this->getRawData()['status']) :
-            null;
+        $data = (array) $this->getRawData()[$this->getType()];
+        $this->status = StatusPropertyConfiguration::fromRawData($data);
     }
 
     public function getStatus(): ?StatusPropertyConfiguration

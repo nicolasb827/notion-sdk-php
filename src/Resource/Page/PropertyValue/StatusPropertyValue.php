@@ -4,24 +4,17 @@ declare(strict_types=1);
 
 namespace Brd6\NotionSdkPhp\Resource\Page\PropertyValue;
 
-use Brd6\NotionSdkPhp\Resource\Property\StatusProperty;
-
-use function array_map;
-
 class StatusPropertyValue extends AbstractPropertyValue
 {
-    protected ?StatusProperty $status = null;
+    protected ?SelectProperty $status = null;
 
     protected function initialize(): void
     {
-        $data = (array)$this->getRawData()[$this->getType()];
-        $this->status = StatusProperty::fromRawData($data);
+        $data = (array) $this->getRawData()[$this->getType()];
+        $this->status = SelectProperty::fromRawData($data);
     }
 
-    /**
-     * @return StatusProperty
-     */
-    public function getStatus(): array
+    public function getStatus(): ?SelectProperty
     {
         return $this->status;
     }
@@ -29,7 +22,7 @@ class StatusPropertyValue extends AbstractPropertyValue
     /**
      * @param StatusProperty $status
      */
-    public function setStatus(StatusProperty $status): self
+    public function setStatus(?SelectProperty $status): self
     {
         $this->status = $status;
 
