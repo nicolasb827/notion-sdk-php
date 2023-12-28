@@ -24,11 +24,11 @@
         "php-http/httplug": "^2.3",
         "php-http/message-factory": "^1.0",
         "psr/http-client-implementation": "^1.0",
-        "psr/http-message": "^1.0"
+        "psr/http-message": "^2.0"
     },
     "require-dev": {
         "captainhook/captainhook": "^5.10",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
         "ergebnis/composer-normalize": "^2.25",
         "hamcrest/hamcrest-php": "^2.0",
         "mockery/mockery": "^1.5",
@@ -40,12 +40,12 @@
         "phpstan/phpstan-mockery": "^1.0",
         "phpstan/phpstan-phpunit": "^1.1",
         "phpunit/phpunit": "^9.5",
-        "psalm/plugin-mockery": "^0.9.1",
-        "psalm/plugin-phpunit": "^0.17.0",
+        "psalm/plugin-mockery": "^1.1.0",
+        "psalm/plugin-phpunit": "^0.18.0",
         "ramsey/coding-standard": "^2.0",
         "roave/security-advisories": "dev-latest",
         "symfony/http-client": "^5.4",
-        "vimeo/psalm": "^4.22"
+        "vimeo/psalm": "^5.6"
     },
     "suggest": {
         "nyholm/psr7": "PSR-7 message implementation",
@@ -69,7 +69,8 @@
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "ergebnis/composer-normalize": true,
-            "captainhook/plugin-composer": true
+            "captainhook/plugin-composer": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
